@@ -4,7 +4,7 @@
   "description": "This project aims to give you a real-world scenario in which you would read and write to your disk via a Node.js express server rather than a database. The project you create serves two purposes: to prepare you for setting up scalable code and architecture for real-world projects and tie together some of the most popular middleware and utilities found in Node.js projects. This project barely touches the surface of what is possible but will prove your ability to use what you’ve learned in real-world scenarios.",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build",
+    "start": "npm run build && npm run jasmine",
     "build": "npx tsc",
     "prettier": "prettier --config .prettierrc '*.js' --write",
     "lint": "eslint . --ext .js",
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/mabrur-h/image-processing-api#readme",
   "devDependencies": {
+    "@types/express": "^4.17.11",
     "@types/node": "^15.3.0",
     "@typescript-eslint/eslint-plugin": "^4.24.0",
     "@typescript-eslint/parser": "^4.24.0",
@@ -33,6 +34,7 @@
   },
   "dependencies": {
     "@types/jasmine": "^3.6.3",
+    "express": "^4.17.1",
     "jasmine": "^3.6.3"
   }
 }
