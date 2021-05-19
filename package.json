@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier": "prettier --config .prettierrc 'src/**/*.js' --write"
+    "prettier": "prettier --config .prettierrc 'src/**/*.js' --write",
+    "lint": "eslint . —ext .js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,8 @@
   "homepage": "https://github.com/mabrur-h/image-processing-api#readme",
   "devDependencies": {
     "@types/node": "^15.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "@typescript-eslint/parser": "^4.24.0",
     "eslint": "^7.26.0",
     "prettier": "^2.3.0",
     "ts-node": "^9.1.1",
