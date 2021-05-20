@@ -1,7 +1,7 @@
-const user = 3;
+import imgProcessor from "../routes/api/imgProcessor";
 
 describe('Just testing', () => {
     it('should return true', function () {
-        expect(user).toEqual(3);
+        expect(3).toEqual(3);
     });
 });

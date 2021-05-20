@@ -8,8 +8,26 @@ import sharp from 'sharp';
 const dirname = __dirname;
 
 imgProcessor.get('/images', async (req, res) => {
+    // Images directory
     const CURRENT_PATH = path.join(dirname, '../../../images', 'full');
     const PROCESSED_PATH = path.join(dirname, '../../../images', 'thumb');
+
+    // Check if file exists
+    async function exists(filePath: string): Promise<boolean> {
+        try {
+            await fsPromises.access(filePath);
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    const isFolderExists: boolean = await exists(PROCESSED_PATH)
+
+    // Create folder thumb if it doesn't exist
+    if (!isFolderExists) {
+        await fsPromises.mkdir(path.join(dirname, '../../../images/thumb'))
+    }
 
     let filename: string;
     let width: number;
@@ -33,17 +51,9 @@ imgProcessor.get('/images', async (req, res) => {
         height = Number(req.query.height) as number;
     }
 
-    async function exists(filePath: string) {
-        try {
-            await fsPromises.access(filePath);
-            return true;
-        } catch (e) {
-            return false;
-        }
-    }
-
     const isExists = await exists(`${PROCESSED_PATH}/${filename}_${width}x${height}.jpg`);
 
+    // Resize image
     if (!isExists) {
         try {
             await sharp(`${CURRENT_PATH}/${filename}.jpg`)
