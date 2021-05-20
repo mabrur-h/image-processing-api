@@ -1,48 +1,48 @@
 {
-  "name": "imageprocessingapi",
-  "version": "1.0.0",
-  "description": "This project aims to give you a real-world scenario in which you would read and write to your disk via a Node.js express server rather than a database. The project you create serves two purposes: to prepare you for setting up scalable code and architecture for real-world projects and tie together some of the most popular middleware and utilities found in Node.js projects. This project barely touches the surface of what is possible but will prove your ability to use what you’ve learned in real-world scenarios.",
-  "main": "index.js",
-  "scripts": {
-    "start": "npm run build && npm run jasmine",
-    "build": "npx tsc",
-    "prettier": "prettier --config .prettierrc '*.js' --write",
-    "lint": "eslint . --ext .js",
-    "jasmine": "jasmine",
-    "dev": "nodemon src/index.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mabrur-h/image-processing-api.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mabrur-h/image-processing-api/issues"
-  },
-  "homepage": "https://github.com/mabrur-h/image-processing-api#readme",
-  "devDependencies": {
-    "@types/express": "^4.17.11",
-    "@types/node": "^15.3.0",
-    "@typescript-eslint/eslint-plugin": "^4.24.0",
-    "@typescript-eslint/parser": "^4.24.0",
-    "dotenv": "^9.0.2",
-    "eslint": "^7.26.0",
-    "jasmine-spec-reporter": "^7.0.0",
-    "prettier": "^2.3.0",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.2.4"
-  },
-  "dependencies": {
-    "@types/helmet": "^4.0.0",
-    "@types/jasmine": "^3.6.3",
-    "@types/morgan": "^1.9.2",
-    "@types/sharp": "^0.28.1",
-    "express": "^4.17.1",
-    "helmet": "^4.6.0",
-    "jasmine": "^3.6.3",
-    "morgan": "^1.10.0",
-    "sharp": "^0.28.2"
-  }
+    "name": "imageprocessingapi",
+    "version": "1.0.0",
+    "description": "This project aims to give you a real-world scenario in which you would read and write to your disk via a Node.js express server rather than a database. The project you create serves two purposes: to prepare you for setting up scalable code and architecture for real-world projects and tie together some of the most popular middleware and utilities found in Node.js projects. This project barely touches the surface of what is possible but will prove your ability to use what you’ve learned in real-world scenarios.",
+    "main": "index.js",
+    "scripts": {
+        "start": "npm run build && npm run jasmine",
+        "build": "npx tsc",
+        "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write",
+        "lint": "eslint . --ext .ts",
+        "jasmine": "jasmine",
+        "dev": "nodemon src/index.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mabrur-h/image-processing-api.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mabrur-h/image-processing-api/issues"
+    },
+    "homepage": "https://github.com/mabrur-h/image-processing-api#readme",
+    "devDependencies": {
+        "@types/express": "^4.17.11",
+        "@types/node": "^15.3.0",
+        "@typescript-eslint/eslint-plugin": "^4.24.0",
+        "@typescript-eslint/parser": "^4.24.0",
+        "dotenv": "^9.0.2",
+        "eslint": "^7.26.0",
+        "jasmine-spec-reporter": "^7.0.0",
+        "prettier": "^2.3.0",
+        "ts-node": "^9.1.1",
+        "typescript": "^4.2.4"
+    },
+    "dependencies": {
+        "@types/helmet": "^4.0.0",
+        "@types/jasmine": "^3.6.3",
+        "@types/morgan": "^1.9.2",
+        "@types/sharp": "^0.28.1",
+        "express": "^4.17.1",
+        "helmet": "^4.6.0",
+        "jasmine": "^3.6.3",
+        "morgan": "^1.10.0",
+        "sharp": "^0.28.2"
+    }
 }

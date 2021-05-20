@@ -1,19 +1,18 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true,
-    "jasmine": true
-  },
-  "extends": "eslint:recommended",
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module"
-  },
-  "rules": {
-  }
+    'extends': ['eslint:recommended'],
+    'env': {
+        'browser': true,
+        'commonjs': true,
+        'node': true,
+        'mocha': true,
+        'es2017': true
+    },
+    'parserOptions': {
+        'parser': 'babel-eslint',
+        'sourceType': 'module',
+        'allowImportExportEverywhere': true
+    },
+    'rules': {
+        'quotes': ['error', 'single'],
+    }
 }

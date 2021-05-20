@@ -1,5 +1,5 @@
-import express from "express";
-import imgProcessor from "./api/imgProcessor";
+import express from 'express';
+import imgProcessor from './api/imgProcessor';
 
 const routes = express.Router();
 
